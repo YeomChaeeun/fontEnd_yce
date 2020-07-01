@@ -1,6 +1,38 @@
 // _header.scss
 
+
 #headBox{
-  width: 100%; height: 100%;
-  background-color: rgba(#fff, 0.5);
+  position: fixed; top: 0; left: 0; z-index: 1000;
+  width: 100%; height: 120px;
+  padding: 20px 10%; box-sizing: border-box;
+  background-color: #ccf;
+  border-bottom: 1px solid #777;
+  h1{
+    float: left;
+    width: 150px; height: 100%;
+    background-color: #fa0;
+    font-size: 1.5rem;
+  }
+  #gnbBox{
+    float: right;
+    width: 700px; height: 100%;
+    font-size: 1.3rem;
+    padding-top: 1rem; box-sizing: border-box;
+    ul{
+      width: 100%; height: 100%;
+    }
+    li{
+      float: left; margin-left: 1rem;
+      width: auto; height: 100%;
+      &.action{
+        font-weight: bold; font-size: 1.5rem;        
+      }
+      a{
+        display: block; width: 100%; height: 100%;
+      }
+      a:hover,a:focus{
+        color: #077; text-decoration: underline;
+      }
+    }
+  }
 }
