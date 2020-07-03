@@ -1,5 +1,4 @@
 // _mixin.scss
-// mixin은 형태를 미리 만들어놓고 불러오는 형태이다.
 
 @mixin Clearfix() {
   &:after, &::after{
@@ -25,7 +24,7 @@
   }  
 }
 
-$url : '../../img/main/';
+$url : '../../img/';
 @mixin Img($i,$r:no-repeat,$p:50% 50%,$s:contain){
   background-image: url($url+$i);
   background-repeat: $r;

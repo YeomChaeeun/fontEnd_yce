@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
 
-  <link rel="stylesheet" href="../fonts/myFont/fonts.css">
+  <link rel="stylesheet" href="../fonts/fontawesome-5/css/all.css">
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
   <link rel="stylesheet" href="../css/src/main.css">
@@ -21,36 +21,117 @@
   <!-- layout -->  
   <div id="wrap">
     <header id="headBox">
-      <h1><a href="./content.html">jquery 기능이해하기</a></h1>
+      <h1 class="hidden_wrap full"><a href="./main.html"><span >yeom chae eun portfolio</span></a></h1>
       <nav id="gnbBox">
-        <ul>
-          <li><a href="#viewBox">주요광고</a></li>
-          <li><a href="#aboutBox">회사소개</a></li>
-          <li><a href="#newBox">신제품</a></li>
-          <li><a href="#bestBox">추천제품</a></li>
-          <li><a href="#noticeBox">게시판</a></li>
-          <li><a href="#asInfoBox">as안내</a></li>
+        <button type="button" class="navbar_toggle">
+          <span class="menu_icon">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </button>
+        <ul class="clearfix">
+          <li><a href="#viewBox">home</a></li>
+          <li><a href="#aboutBox">about</a></li>
+          <li><a href="#skillBox">skills</a></li>
+          <li><a href="#workBox">work</a></li>
+          <li><a href="#contactBox">contact</a></li>
         </ul>
+        <a href="#" class="sns"><span class="hidden">instagram 바로가기</span></a>
       </nav>
     </header>
+
     <section id="viewBox">
-      <h2>광고</h2>
+      <div class="view_content">
+        <div class="container">
+          <div class="text-container">
+            <h2><span class="rotating_text">front-end, ui/ux, Web</span> developer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quos tempore blanditiis quas, recusandae magni vitae aperiam eligendi. A mollitia eum delectus et modi cum doloribus tempore voluptatum, illum consectetur?</p>
+            <a href="#aboutBox" class="page-scroll">DISCOVER</a>
+          </div>
+        </div> <!-- end of container -->
+      </div> <!-- end of view-content -->
     </section>
+
     <article id="aboutBox">
-      <h2>회사소개</h2>
+      <div class="container">
+        <div class="text-container">
+          <h2>about me</h2>
+        </div>
+      </div>
     </article>
-    <article id="newBox">
-      <h2>신제품 소식</h2>
+
+    <article id="skillBox">
+      <div class="container">
+        <div class="text-container">
+          <h2>skills</h2>
+        </div>
+        <div class="skill_list">
+          <ul>
+            <li>
+              <dl>
+                <dt>skill_01</dt>
+                <dd></dd>  
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>skill_02</dt>
+                <dd></dd>  
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>skill_03</dt>
+                <dd></dd>  
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>skill_04</dt>
+                <dd></dd>  
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>skill_05</dt>
+                <dd>
+                </dd>  
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>skill_06</dt>
+                <dd></dd>  
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
     </article>
-    <article id="bestBox">
-      <h2>인기 및 추천 상품</h2>
+
+    <article id="workBox">
+      <div class="container">
+        <div class="text-container">
+          <h2>workBox</h2>
+          <div class="work_list">
+            <ul>
+              <li><a href="#"><span>work_01</span></a></li>
+              <li><a href="#"><span>work_02</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </article>
-    <article id="noticeBox">
-      <h2>안내 및 게시판</h2>
+    
+    <article id="contactBox">
+      <div class="container">
+        <div class="text-container">
+          <h2>contact me</h2>
+        </div>
+      </div>
     </article>
-    <article id="asInfoBox">
-      <h2>as안내</h2>
-    </article>
+
     <footer id="footBox">
       <h2>footer</h2>
     </footer>

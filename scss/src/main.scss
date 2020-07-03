@@ -5,43 +5,29 @@
   text-align: center;
 }
 
+@import "../setting/mixin";
+@import "../setting/color";
 @import "../setting/variable";
 @import "../parts/header";
 @import "../parts/viewBox";
+@import "../parts/aboutBox";
+@import "../parts/skillBox";
 
-/* #aboutBox ============================================================== */
-#aboutBox{
-  width: 70%; max-width: 1600px; height: 100%; margin:auto; background-color: #ccf;
+
+/* #workBox ================================================================*/
+#workBox{
+  width: 100%; height: 100%; background-color: #cca;
   padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
+
 }
-/* //#aboutBox ============================================================= */
+/* //#workBox ==============================================================*/
+
 
 /* #newBox ============================================================== */
-#newBox{
-  width: 100%; height: 100%; background-color: #a85;
+#contactBox{
+  width: 100%; height: 100%; background-color: #a85; max-height: 500px;
   padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#newBox ============================================================= */
-
-/* #bestBox ============================================================== */
-#bestBox{
-  width: 100%; max-width: 1600px; height: 100%; margin:auto; background-color: #faf;
-  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
-}
-/* //#bestBox ============================================================= */
-
-/* #noticeBox ============================================================== */
-#noticeBox{
-  width: 100%; max-width: 1200px; height: 100%; margin:auto; background-color: #ddd;
-  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
-}
-/* //#noticeBox ============================================================= */
-
-/* #asInfoBox ============================================================== */
-#asInfoBox{
-  width: 100%; height: 100%; background-color: #7ff;
-  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
-}
-/* //#asInfoBox ============================================================= */
 
 @import "../parts/footer";

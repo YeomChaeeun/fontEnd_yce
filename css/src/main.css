@@ -5,127 +5,414 @@
   text-align: center;
 }
 
+/* color.css */
 #headBox {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  width: 100%;
-  height: 120px;
-  padding: 20px 10%;
-  box-sizing: border-box;
-  background-color: #ccf;
+  display: flex;
+  width: 62px;
+  height: 100vh;
+  background-color: #364A61;
   border-bottom: 1px solid #777;
 }
 #headBox h1 {
-  float: left;
-  width: 150px;
-  height: 100%;
-  background-color: #fa0;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  right: 0;
+  bottom: auto;
+  z-index: 2000;
+  display: flex;
+  width: 100%;
+  height: 44px;
+  background-color: #ffaa00;
   font-size: 1.5rem;
 }
+#headBox h1 a {
+  display: block;
+}
+@media screen and (max-width: 639px) {
+  #headBox {
+    width: 44px;
+  }
+  #headBox.active {
+    width: 100%;
+  }
+  #headBox.active h1 {
+    display: none;
+  }
+  #headBox.active .sns {
+    margin: auto;
+    bottom: 50px;
+  }
+  #headBox.active #gnbBox ul {
+    display: block;
+    transform: rotate(0);
+    width: 100%;
+    height: 300px;
+  }
+  #headBox.active #gnbBox li {
+    display: block;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    line-height: 100%;
+    border-style: none none none;
+  }
+  #headBox.active .navbar_toggle {
+    top: 20px;
+    right: 20px;
+  }
+}
 #headBox #gnbBox {
-  float: right;
-  width: 700px;
-  height: 100%;
-  font-size: 1.3rem;
-  padding-top: 1rem;
-  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  border-right: 2px none #fff;
+  transform: rotate(0);
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
 }
 #headBox #gnbBox ul {
+  float: right;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin-top: 80px;
+  padding-left: 30px;
+  align-items: center;
+  align-self: auto;
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 639px) {
+  #headBox #gnbBox ul {
+    display: none;
+  }
+}
+#headBox #gnbBox li {
+  position: relative;
+  display: inline-block;
+  align-self: auto;
+  height: 30px;
+  padding-bottom: 43px;
+  margin-top: 17px;
+  margin-right: 30px;
+  border-bottom: 1px solid #fff;
+  color: #fdfdfd;
+  font-size: 22px;
+  text-decoration: none;
+  line-height: 120%;
+}
+#headBox #gnbBox li a {
+  display: inline-block;
+  margin-top: 17px;
   width: 100%;
   height: 100%;
 }
-#headBox #gnbBox li {
-  float: left;
-  margin-left: 1rem;
-  width: auto;
-  height: 100%;
-}
-#headBox #gnbBox li.action {
+#headBox #gnbBox li.action a {
   font-weight: bold;
   font-size: 1.5rem;
+  color: #ffaa00;
 }
-#headBox #gnbBox li a {
+#headBox #gnbBox li:before {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  width: 0;
+  height: 3px;
+  background-color: #ffaa00;
+  transition: all 0.2s ease;
+}
+#headBox #gnbBox li.action:before {
+  width: 100%;
+}
+#headBox #gnbBox .sns {
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-image: url("../../img/insta_white.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#headBox .navbar_toggle {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 30;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 639px) {
+  #headBox .navbar_toggle {
+    display: block;
+  }
+}
+#headBox .navbar_toggle .menu_icon {
   display: block;
   width: 100%;
   height: 100%;
 }
-#headBox #gnbBox li a:hover, #headBox #gnbBox li a:focus {
-  color: #077;
-  text-decoration: underline;
+#headBox .navbar_toggle .menu_icon i {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 10.5px;
+  transition: all 300ms ease;
+}
+#headBox .navbar_toggle .menu_icon i:nth-child(3) {
+  margin-bottom: 0;
+}
+#headBox .navbar_toggle .menu_icon.active i:nth-child(2) {
+  background-color: transparent;
+}
+#headBox .navbar_toggle .menu_icon.active i:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+}
+#headBox .navbar_toggle .menu_icon.active i:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
 }
 
 #viewBox {
   width: 100%;
   height: 100%;
-  background-color: #a8f;
-  padding-top: 8rem;
-  box-sizing: border-box;
-  font-size: 2rem;
+  background-color: #70853C;
 }
 
-/* #aboutBox ============================================================== */
+.view_content {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  padding-left: 62px;
+  box-sizing: border-box;
+  font-size: 2rem;
+  padding-top: 14.75rem;
+  padding-bottom: 17.5rem;
+}
+@media screen and (max-width: 639px) {
+  .view_content {
+    padding: 2rem;
+    padding-left: 44px;
+    font-size: 1.5rem;
+  }
+  .view_content .text-container p {
+    font-size: 1rem;
+  }
+}
+.view_content a {
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  padding: 1rem;
+  border: 0.125rem solid #C9971F;
+  border-radius: 0.25rem;
+  background-color: #364A61;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.view_content a:focus, .view_content a:hover {
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  max-height: 900px;
+}
+@media screen and (max-width: 639px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    max-width: 950px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.text-container {
+  width: 100%;
+  height: auto;
+}
+.text-container h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.text-container p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 3rem;
+  color: #dfe5ec;
+  font-size: 1.2rem;
+}
+
 #aboutBox {
-  width: 70%;
+  width: 100%;
   max-width: 1600px;
   height: 100%;
   margin: auto;
   background-color: #ccf;
+  margin: auto;
   padding-top: 8rem;
   box-sizing: border-box;
   font-size: 2rem;
 }
 
-/* //#aboutBox ============================================================= */
+#skillBox {
+  width: 100%;
+  height: 100%;
+  background-color: #acc;
+  padding-top: 8rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+}
+
+.skill_list {
+  width: 100%;
+  height: 90%;
+}
+.skill_list ul {
+  width: 100%;
+  height: 100%;
+}
+.skill_list li {
+  float: left;
+  width: 30%;
+  height: 40%;
+  background-color: #ddd;
+  margin-right: 5%;
+  margin-bottom: 2.5%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.skill_list li:nth-child(3n) {
+  margin-right: 0;
+}
+.skill_list li dl {
+  width: 100%;
+  height: 100%;
+}
+.skill_list li dt {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 1rem;
+}
+.skill_list li dd {
+  width: 100%;
+  height: 80%;
+}
+.skill_list li .circle-chart {
+  width: 150px;
+  height: 150px;
+}
+.skill_list li .circle-chart-background {
+  stroke: #cccccc;
+  stroke-width: 1.35;
+  stroke-dasharray: 100;
+  fill: none;
+}
+.skill_list li .circle-chart-circle {
+  stroke: #4f5357;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 50;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+.skill_list li .circle-chart-info {
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+.skill_list li .circle-chart-info .circle-chart-percent {
+  text-align: center;
+  text-anchor: middle;
+  font-size: 9px;
+}
+.skill_list li .circle-chart-info .circle-chart-subline {
+  text-align: center;
+  text-anchor: middle;
+  font-size: 4px;
+}
+
+.circle_fill {
+  animation-name: circle-chart-fill;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.circle_appear {
+  animation-name: circle-chart-appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes circle-chart-fill {
+  from {
+    stroke-dasharray: 0 100;
+  }
+}
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* #workBox ================================================================*/
+#workBox {
+  width: 100%;
+  height: 100%;
+  background-color: #cca;
+  padding-top: 8rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+}
+
+/* //#workBox ==============================================================*/
 /* #newBox ============================================================== */
-#newBox {
+#contactBox {
   width: 100%;
   height: 100%;
   background-color: #a85;
+  max-height: 500px;
   padding-top: 8rem;
   box-sizing: border-box;
   font-size: 2rem;
 }
 
 /* //#newBox ============================================================= */
-/* #bestBox ============================================================== */
-#bestBox {
-  width: 100%;
-  max-width: 1600px;
-  height: 100%;
-  margin: auto;
-  background-color: #faf;
-  padding-top: 8rem;
-  box-sizing: border-box;
-  font-size: 2rem;
-}
-
-/* //#bestBox ============================================================= */
-/* #noticeBox ============================================================== */
-#noticeBox {
-  width: 100%;
-  max-width: 1200px;
-  height: 100%;
-  margin: auto;
-  background-color: #ddd;
-  padding-top: 8rem;
-  box-sizing: border-box;
-  font-size: 2rem;
-}
-
-/* //#noticeBox ============================================================= */
-/* #asInfoBox ============================================================== */
-#asInfoBox {
-  width: 100%;
-  height: 100%;
-  background-color: #7ff;
-  padding-top: 8rem;
-  box-sizing: border-box;
-  font-size: 2rem;
-}
-
-/* //#asInfoBox ============================================================= */
 #footBox {
   width: 100%;
   height: 300px;
