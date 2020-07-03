@@ -1,7 +1,7 @@
 // skillBox.scss
 
 #skillBox{
-  width: 100%; height: 100%; background-color: #acc;
+  width: 100%; height: 100%; background-color: nth($colorList,3);
   padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 
