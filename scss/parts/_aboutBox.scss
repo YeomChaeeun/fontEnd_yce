@@ -7,4 +7,19 @@
 }
 
 
-
+.about_text{
+  float: left;
+  width: 50%; height: 600px;
+  background-color: #fff;
+  >dl{
+    width: 100%; height: 100%; margin: auto;
+    dt{float: left; width: 20%; height: auto;}
+    dd{float: left; width: 20%; height: auto;}
+    
+  }  
+}
+.about_img{
+  float: right;
+  width: 50%; height: 400px;
+  background-color: #999;
+}

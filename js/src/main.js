@@ -163,6 +163,7 @@
   var chartInfo = skillBox.find('.circle-chart-info');
 
   var skillOffset = $('#skillBox').offset().top;
+  chartInfo.addClass('circle_appear');
 
   $(window).on('scroll',function(){
     var thisScroll = $(this).scrollTop();
