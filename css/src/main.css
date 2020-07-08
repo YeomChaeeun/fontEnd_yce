@@ -1,4 +1,4 @@
-/* onepage_scroll.css */
+/* main.css */
 #wrap {
   width: 100%;
   height: 100%;
@@ -73,8 +73,6 @@
   justify-content: center;
   border-right: 2px none #fff;
   transform: rotate(0);
-  font-size: 14px;
-  line-height: 20px;
   color: #333;
 }
 #headBox #gnbBox ul {
@@ -90,7 +88,7 @@
 }
 @media screen and (max-width: 639px) {
   #headBox #gnbBox ul {
-    display: none;
+    height: 40px;
   }
 }
 #headBox #gnbBox li {
@@ -105,7 +103,12 @@
   color: #fdfdfd;
   font-size: 22px;
   text-decoration: none;
-  line-height: 120%;
+  line-height: 100%;
+}
+@media screen and (max-width: 639px) {
+  #headBox #gnbBox li {
+    font-size: 18px;
+  }
 }
 #headBox #gnbBox li a {
   display: inline-block;
@@ -145,71 +148,30 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-#headBox .navbar_toggle {
-  display: none;
-  position: absolute;
-  top: 100px;
-  right: 0;
-  z-index: 30;
-  width: 100%;
-  height: 30px;
-  cursor: pointer;
-}
-@media screen and (max-width: 639px) {
-  #headBox .navbar_toggle {
-    display: block;
-  }
-}
-#headBox .navbar_toggle .menu_icon {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#headBox .navbar_toggle .menu_icon i {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  margin-bottom: 10.5px;
-  transition: all 300ms ease;
-}
-#headBox .navbar_toggle .menu_icon i:nth-child(3) {
-  margin-bottom: 0;
-}
-#headBox .navbar_toggle .menu_icon.active i:nth-child(2) {
-  background-color: transparent;
-}
-#headBox .navbar_toggle .menu_icon.active i:nth-child(1) {
-  transform: translateY(14px) rotate(45deg);
-}
-#headBox .navbar_toggle .menu_icon.active i:nth-child(3) {
-  transform: translateY(-14px) rotate(-45deg);
-}
 
 #viewBox {
   width: 100%;
   height: 100%;
+  min-height: 800px;
   background-color: #70853C;
 }
 
 .view_content {
   width: 100%;
   height: 100%;
-  padding: 10px;
-  padding-left: 62px;
-  box-sizing: border-box;
   font-size: 2rem;
   padding-top: 14.75rem;
   padding-bottom: 17.5rem;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 639px) {
   .view_content {
-    padding: 2rem;
-    padding-left: 44px;
-    font-size: 1.5rem;
+    padding: 0;
   }
-  .view_content .text-container p {
-    font-size: 1rem;
+}
+@media screen and (max-width: 640px) {
+  .view_content {
+    padding-left: 0;
   }
 }
 .view_content a {
@@ -234,10 +196,18 @@
   margin: auto;
   height: 100%;
   max-height: 900px;
+  padding: 2rem;
+  padding-left: 5.875rem;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 639px) {
   .container {
+    font-size: 1.5rem;
     max-width: 540px;
+    padding-left: 4.75rem;
+  }
+  .container .text-container p {
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 1023px) {
@@ -263,7 +233,7 @@
 
 .text-container {
   width: 100%;
-  height: auto;
+  height: 80%;
 }
 .text-container h2 {
   margin-bottom: 1rem;
@@ -280,8 +250,8 @@
 
 #aboutBox {
   width: 100%;
-  max-width: 1600px;
   height: 100%;
+  min-height: 1600px;
   margin: auto;
   background-color: #302417;
   margin: auto;
@@ -289,26 +259,7 @@
   box-sizing: border-box;
   font-size: 2rem;
 }
-
-.about_text {
-  float: left;
-  width: 50%;
-  height: 600px;
-  background-color: #fff;
-}
-.about_text > dl {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-.about_text > dl dt {
-  float: left;
-  width: 20%;
-  height: auto;
-}
-.about_text > dl dd {
-  float: left;
-  width: 20%;
+#aboutBox .text-container {
   height: auto;
 }
 
@@ -318,19 +269,41 @@
   height: 400px;
   background-color: #999;
 }
+@media screen and (max-width: 639px) {
+  .about_img {
+    float: none;
+    width: 100%;
+    height: 200px;
+  }
+}
 
-#skillBox {
+.about_text {
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.about_text p {
+  text-align: left;
+}
+@media screen and (max-width: 639px) {
+  .about_text {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+}
+
+.skill_box {
+  float: left;
   width: 100%;
-  height: 100%;
-  background-color: #C9971F;
-  padding-top: 8rem;
-  box-sizing: border-box;
-  font-size: 2rem;
+  height: auto;
 }
 
 .skill_list {
+  margin-top: 50px;
   width: 100%;
-  height: 90%;
+  height: 800px;
 }
 .skill_list ul {
   width: 100%;
@@ -341,13 +314,10 @@
   width: 30%;
   height: 40%;
   background-color: #ddd;
-  margin-right: 5%;
+  margin-right: 3%;
   margin-bottom: 2.5%;
   padding: 1rem;
   box-sizing: border-box;
-}
-.skill_list li:nth-child(3n) {
-  margin-right: 0;
 }
 .skill_list li dl {
   width: 100%;
@@ -363,8 +333,10 @@
   height: 80%;
 }
 .skill_list li .circle-chart {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  max-height: 150px;
 }
 .skill_list li .circle-chart-background {
   stroke: #cccccc;
@@ -395,6 +367,16 @@
   text-anchor: middle;
   font-size: 4px;
 }
+@media screen and (max-width: 639px) {
+  .skill_list li {
+    width: 45%;
+    height: 30%;
+    margin-right: 5%;
+  }
+  .skill_list li:nth-child(2n) {
+    margin-right: 0;
+  }
+}
 
 .circle_fill {
   animation-name: circle-chart-fill;
@@ -422,6 +404,7 @@
 #workBox {
   width: 100%;
   height: 100%;
+  min-height: 800px;
   background-color: #70853C;
   padding-top: 8rem;
   box-sizing: border-box;
@@ -429,49 +412,97 @@
 }
 
 .work_list {
+  margin-top: 5rem;
   width: 100%;
   height: 100%;
-  min-height: 500px;
 }
 .work_list > ul {
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  margin: auto;
 }
 .work_list > ul > li {
   float: left;
   width: 48%;
-  height: 100%;
-  min-height: 500px;
-  background-color: #fff;
+  height: 90%;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 1rem;
+  color: #fdfdfd;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 .work_list > ul > li:last-child {
   float: right;
 }
 .work_list > ul > li a {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
-.work_list > ul > li span {
+.work_list > ul > li > span {
   display: block;
   width: 100%;
-  height: 100px;
+  height: auto;
+}
+.work_list > ul > li .work_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  border-radius: 1rem;
+  background-color: rgba(50, 50, 50, 0);
+  transition: background-color 300ms linear;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 50% 50%;
+}
+.work_list > ul > li:hover .work_img {
+  background-color: #333333;
+}
+.work_list > ul > li:hover .work_img.work_img_01 {
+  background-image: url("../../img/twosome.png");
+}
+.work_list > ul > li:hover .work_img.work_img_02 {
+  background-image: url("../../img/showBox.png");
+}
+.work_list > ul > li h3 {
+  margin-top: 35%;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 639px) {
+  .work_list > ul > li {
+    float: none;
+    width: 100%;
+    height: 200px;
+  }
+  .work_list > ul > li:first-child {
+    margin-bottom: 50px;
+  }
 }
 
-/* #newBox ============================================================== */
 #contactBox {
   width: 100%;
   height: 100%;
+  min-height: 800px;
   background-color: #333;
   padding-top: 8rem;
   box-sizing: border-box;
   font-size: 2rem;
 }
+#contactBox .text-container p {
+  text-align: left;
+  margin: 0;
+}
 
-/* //#newBox ============================================================= */
 #footBox {
   width: 100%;
-  height: 300px;
+  height: 100px;
   background-color: #060C08;
 }

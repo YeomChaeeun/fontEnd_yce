@@ -2,24 +2,92 @@
 
 
 #aboutBox{
-  width: 100%; max-width: 1600px; height: 100%; margin:auto; background-color: nth($colorList, 1); margin: auto;
+  width: 100%; height: 100%; min-height: 1600px; margin:auto; background-color: nth($colorList, 1); margin: auto;
   padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
+  .text-container{height: auto;}
 }
 
-
-.about_text{
-  float: left;
-  width: 50%; height: 600px;
-  background-color: #fff;
-  >dl{
-    width: 100%; height: 100%; margin: auto;
-    dt{float: left; width: 20%; height: auto;}
-    dd{float: left; width: 20%; height: auto;}
-    
-  }  
-}
 .about_img{
   float: right;
   width: 50%; height: 400px;
   background-color: #999;
+  @include Mob(){
+    float: none;
+    width: 100%; height: 200px;
+  }
+}
+.about_text{
+  float: left;
+  width: 50%; height: auto;
+  // background-color: #fff;
+  p{text-align: left;}
+  @include Mob(){
+    float: none;
+    width: 100%; height: auto;
+    margin-top: 50px;
+  }
+}
+
+.skill_box{ float: left; width: 100%; height: auto;}
+.skill_list{
+  margin-top: 50px;
+  width: 100%; height: 800px;
+  ul{width: 100%; height: 100%;}
+  li{
+    float: left; width: 30%; height: 40%; background-color: #ddd;
+    margin-right: 3%; margin-bottom: 2.5%; padding: 1rem; box-sizing: border-box;
+    dl{width: 100%; height: 100%;}
+    dt{width: 100%; height: 20%; margin-bottom: 1rem;}
+    dd{width: 100%; height: 80%;}
+    
+    .circle-chart{
+      width:100%; max-width: 150px;
+      height:100%; max-height: 150px;
+    }
+    .circle-chart-background{
+      stroke:#cccccc; stroke-width:1.35; stroke-dasharray:100;
+      fill:none;
+    }
+    .circle-chart-circle{
+      stroke:#4f5357; stroke-width:1.5; 
+      stroke-linecap:round; fill:none; stroke-dasharray: 50;
+      // animation: circle-chart-fill 4s reverse;
+      transform: rotate(-90deg);
+      transform-origin: center;
+    }
+    .circle-chart-info {
+      // animation: circle-chart-appear 4s forwards;
+      opacity: 0;
+      transform: translateY(0.3em);
+      .circle-chart-percent{text-align:center; text-anchor:middle; font-size:9px;}
+      .circle-chart-subline{text-align:center; text-anchor:middle; font-size:4px;}
+    }
+    @include Mob(){
+      width: 45%; height: 30%; margin-right: 5%;
+      &:nth-child(2n){margin-right: 0;}
+    }
+  }
+}
+
+.circle_fill{
+  animation-name: circle-chart-fill;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.circle_appear{
+  animation-name: circle-chart-appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes circle-chart-fill {
+  from{ 
+    stroke-dasharray: 0 100;
+  }
+}                                 
+@keyframes circle-chart-appear { 
+  to{
+    opacity: 1;
+    transform: translateY(0);           
+  }
 }

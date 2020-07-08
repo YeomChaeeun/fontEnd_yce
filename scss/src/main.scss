@@ -1,4 +1,4 @@
-/* onepage_scroll.css */
+/* main.css */
 
 #wrap{
   width: 100%; height: 100%;
@@ -11,16 +11,6 @@
 @import "../parts/header";
 @import "../parts/viewBox";
 @import "../parts/aboutBox";
-@import "../parts/skillBox";
 @import "../parts/workBox";
-
-
-
-/* #newBox ============================================================== */
-#contactBox{
-  width: 100%; height: 100%; background-color: nth($natural,2);
-  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
-}
-/* //#newBox ============================================================= */
-
+@import "../parts/contactBox";
 @import "../parts/footer";
