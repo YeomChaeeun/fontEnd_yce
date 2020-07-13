@@ -474,10 +474,10 @@
   background-color: #333333;
 }
 .work_list > ul > li:hover .work_img.work_img_01 {
-  background-image: url("../../img/twosome/twosome.png");
+  background-image: url("../../img/twosome/twosome_01.png");
 }
 .work_list > ul > li:hover .work_img.work_img_02 {
-  background-image: url("../../img/showBox/showBox.png");
+  background-image: url("../../img/showBox/showBox_01.png");
 }
 .work_list > ul > li h3 {
   margin-top: 35%;
