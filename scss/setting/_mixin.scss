@@ -96,7 +96,3 @@ $deviceWidth:(
   $n : $s / map-get($deviceWidth, $d) * 100 + vw;
   @return $n;
 }
-
-// @mixin vw($i, $j) {
-//   myFn($i, $j);
-// }
