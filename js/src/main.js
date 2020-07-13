@@ -64,7 +64,7 @@
   // 1000px 이전에는 안보이고 그 이후에 보이게 만들기
   // 클릭시 최 상단으로 이동
   var topMvText = '<div class="top_move_btn"><a href="#"><span>상단으로 이동</span></a></div>';
-  $('#asInfoBox').after(topMvText);
+  // $('#contactBox').after(topMvText);
 
   var topMvBtn = $('.top_move_btn');
   topMvBtn.css({position:'fixed',left:'50%',bottom:'3rem',marginLeft:'30rem',zIndex:'1000',width:'100px',height:'100px',backgroundColor:'#fa0'});

@@ -1,0 +1,350 @@
+/* sub_02.css */
+#wrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* color.css */
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  width: 62px;
+  height: 100vh;
+  background-color: #364A61;
+  border-bottom: 1px solid #777;
+}
+#headBox h1 {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  right: 0;
+  bottom: auto;
+  z-index: 2000;
+  display: flex;
+  width: 100%;
+  height: 44px;
+  background-color: #ffaa00;
+  font-size: 1.5rem;
+}
+#headBox h1 a {
+  display: block;
+}
+@media screen and (max-width: 639px) {
+  #headBox {
+    width: 44px;
+  }
+  #headBox.active {
+    width: 100%;
+  }
+  #headBox.active h1 {
+    display: none;
+  }
+  #headBox.active .sns {
+    margin: auto;
+    bottom: 50px;
+  }
+  #headBox.active #gnbBox ul {
+    display: block;
+    transform: rotate(0);
+    width: 100%;
+    height: 300px;
+  }
+  #headBox.active #gnbBox li {
+    display: block;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    line-height: 100%;
+    border-style: none none none;
+  }
+  #headBox.active .navbar_toggle {
+    top: 20px;
+    right: 20px;
+  }
+}
+#headBox #gnbBox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  border-right: 2px none #fff;
+  transform: rotate(0);
+  color: #333;
+}
+#headBox #gnbBox ul {
+  float: right;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin-top: 80px;
+  padding-left: 30px;
+  align-items: center;
+  align-self: auto;
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 639px) {
+  #headBox #gnbBox ul {
+    height: 40px;
+  }
+}
+#headBox #gnbBox li {
+  position: relative;
+  display: inline-block;
+  align-self: auto;
+  height: 30px;
+  padding-bottom: 43px;
+  margin-top: 17px;
+  margin-right: 30px;
+  border-bottom: 1px solid #fff;
+  color: #fdfdfd;
+  font-size: 22px;
+  text-decoration: none;
+  line-height: 100%;
+}
+@media screen and (max-width: 639px) {
+  #headBox #gnbBox li {
+    font-size: 18px;
+  }
+}
+#headBox #gnbBox li a {
+  display: inline-block;
+  margin-top: 17px;
+  width: 100%;
+  height: 100%;
+}
+#headBox #gnbBox li.action a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffaa00;
+}
+#headBox #gnbBox li:before {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  width: 0;
+  height: 3px;
+  background-color: #ffaa00;
+  transition: all 0.2s ease;
+}
+#headBox #gnbBox li.action:before {
+  width: 100%;
+}
+#headBox #gnbBox .sns {
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-image: url("../../img/insta_white.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#subBox {
+  width: 100%;
+  height: 100%;
+  background-color: #70853C;
+}
+
+.sub_container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding-left: 3.875rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 639px) {
+  .sub_container {
+    font-size: 1.5rem;
+    max-width: 540px;
+    padding-left: 2.75rem;
+  }
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 3rem;
+  color: #dfe5ec;
+  font-size: 1.2rem;
+}
+
+.sub_cont {
+  float: left;
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid #fff;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.text_area {
+  position: relative;
+  padding-top: 14.75rem;
+  padding-bottom: 17.5rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+  background-color: #70853C;
+}
+.text_area p {
+  position: absolute;
+  left: 2rem;
+  bottom: 8rem;
+  text-align: left;
+}
+.text_area a {
+  position: absolute;
+  right: 5rem;
+  bottom: 20rem;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: 0.125rem solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #364A61;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s;
+}
+.text_area a:focus, .text_area a:hover {
+  background-color: transparent;
+}
+
+.img_area {
+  position: relative;
+  background-color: #302417;
+  border: 0;
+}
+.img_area .btn_area {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+.img_area .btn_area button {
+  width: 0;
+  height: 0;
+  background-color: rgba(250, 250, 250, 0.4);
+}
+.img_area .img_part {
+  width: 100%;
+  height: 100%;
+}
+.img_area .img_part ul {
+  width: 100%;
+  height: 100%;
+}
+.img_area .img_part ul li {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 80%;
+}
+.img_area .img_part ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.img_01 {
+  background-image: url("../../img/showBox/gallery_01.jpg");
+  z-index: 6;
+}
+
+.img_02 {
+  background-image: url("../../img/showBox/gallery_02.jpg");
+  z-index: 5;
+}
+
+.img_03 {
+  background-image: url("../../img/showBox/gallery_03.jpg");
+  z-index: 4;
+}
+
+.img_04 {
+  background-image: url("../../img/showBox/gallery_04.jpg");
+  z-index: 3;
+}
+
+.img_05 {
+  background-image: url("../../img/showBox/gallery_05.jpg");
+  z-index: 2;
+}
+
+.img_06 {
+  background-image: url("../../img/showBox/gallery_06.jpg");
+  z-index: 1;
+}
+
+.img_big {
+  position: absolute;
+  left: 100%;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+.img_big .btn_area {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+}
+.img_big .btn_area button {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.img_big .close_btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 30;
+  font-size: 1.5rem;
+}
+.img_big .img_cont {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 0, 0.4);
+  overflow: hidden;
+}
+.img_big .img_cont ul {
+  width: 100%;
+  height: 100%;
+}
+.img_big .img_cont ul li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 80%;
+}
+.img_big .img_cont ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.img_big .web_link {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.5rem;
+}
