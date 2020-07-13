@@ -1,9 +1,17 @@
 // sub_02.scss
 /* sub_02.css */
 
+@font-face { 
+  font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
 #wrap{
   width: 100%; height: 100%;
   text-align: center;
+  font-family: 'NEXON Lv1 Gothic OTF normal';   
 }
 
 @import "../setting/mixin";
@@ -119,10 +127,14 @@ p{
   width: 100%; height: 100%;
   background-color: nth($natural, 2);
   .btn_area{
-    position: absolute; top: 50%; right: 30px;
+    position: absolute; top: 50%; right: 100px;
     button{
-      width: 30px; height: 30px;
-      background-color: rgba(0, 0, 0, 0.4);
+      width: 50px; height: 50px;
+      transform: translateY(-25px);
+      color: nth($colorList, 3);
+      font-size: 30px;
+      line-height: 50px;
+      text-align: center;
     }
   }
   .close_btn{
