@@ -39,7 +39,6 @@
     if(thisBtn === nextBtn[0] && check){
       check = false;
       (n>=ImgLen-1)? n=0 : n+=1;
-      console.log(n,k);
       FadeFn(n,k);
     }
   });
@@ -102,7 +101,6 @@
       }
       check=true;
     });
-    check=true;
   });
 
 
