@@ -173,7 +173,7 @@
 }
 @media screen and (max-width: 639px) {
   .view_content {
-    padding: 0;
+    padding-top: 30%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -247,6 +247,11 @@
   color: #fff;
   text-transform: uppercase;
 }
+@media screen and (max-width: 639px) {
+  .text-container h2 {
+    font-size: 2rem;
+  }
+}
 .text-container p {
   max-width: 600px;
   margin: auto;
@@ -258,13 +263,19 @@
 #aboutBox {
   width: 100%;
   height: 100%;
-  min-height: 1600px;
+  min-height: 1400px;
   margin: auto;
-  margin: auto;
-  padding-top: 8rem;
+  padding-top: 4rem;
   box-sizing: border-box;
   font-size: 2rem;
   background-color: #302417;
+}
+@media screen and (max-width: 639px) {
+  #aboutBox {
+    height: 359.375vw;
+    min-height: 1150px;
+    max-height: 1600px;
+  }
 }
 #aboutBox .text-container {
   height: auto;
@@ -282,7 +293,9 @@
   .about_img {
     float: none;
     width: 100%;
-    height: 200px;
+    height: 150px;
+    height: 46.875vw;
+    max-height: 400px;
   }
 }
 
@@ -313,6 +326,13 @@
   margin-top: 50px;
   width: 100%;
   height: 800px;
+}
+@media screen and (max-width: 639px) {
+  .skill_list {
+    height: 500px;
+    height: 156.25vw;
+    max-height: 800px;
+  }
 }
 .skill_list ul {
   width: 100%;
@@ -379,11 +399,8 @@
 @media screen and (max-width: 639px) {
   .skill_list li {
     width: 45%;
-    height: 30%;
-    margin-right: 5%;
-  }
-  .skill_list li:nth-child(2n) {
-    margin-right: 0;
+    height: 33%;
+    font-size: 0.8rem;
   }
 }
 
@@ -415,7 +432,7 @@
   height: 100%;
   min-height: 800px;
   background-color: #70853C;
-  padding-top: 8rem;
+  padding-top: 4rem;
   box-sizing: border-box;
   font-size: 2rem;
 }
@@ -443,6 +460,11 @@
 }
 .work_list > ul > li:last-child {
   float: right;
+}
+@media screen and (max-width: 639px) {
+  .work_list > ul > li {
+    font-size: 1rem;
+  }
 }
 .work_list > ul > li a {
   position: relative;
@@ -486,6 +508,12 @@
   font-size: 2.5rem;
 }
 @media screen and (max-width: 639px) {
+  .work_list > ul > li h3 {
+    margin-top: 20%;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 639px) {
   .work_list > ul > li {
     float: none;
     width: 100%;
@@ -518,6 +546,14 @@
 #footBox .copy {
   width: 100%;
   height: 100%;
+  padding-left: 62px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 639px) {
+  #footBox .copy {
+    padding-left: 44px;
+    font-size: 0.8rem;
+  }
 }
 #footBox .copy p {
   display: inline-block;

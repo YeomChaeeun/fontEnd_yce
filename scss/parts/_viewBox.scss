@@ -10,7 +10,7 @@
   padding-top: 14.75rem; padding-bottom: 17.5rem;
   box-sizing: border-box;
   @include Mob(){
-    padding:0;
+    padding-top: 30%;
   }
   @include myDevice(640){
     padding-left: 0;
@@ -58,6 +58,9 @@
     margin-bottom: 1rem;
     color: #fff;
     text-transform: uppercase;
+    @include Mob(){
+      font-size: 2rem;
+    }
   }
   p{
     max-width: 600px; 
