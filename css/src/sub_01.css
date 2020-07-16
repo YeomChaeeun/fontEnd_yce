@@ -1,17 +1,4 @@
 /* sub_01.css */
-@font-face {
-  font-family: "NEXON Lv1 Gothic OTF Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-#wrap {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-family: "NEXON Lv1 Gothic OTF normal";
-}
-
 /* color.css */
 #headBox {
   position: fixed;
@@ -156,10 +143,23 @@
   background-repeat: no-repeat;
 }
 
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "NEXON Lv1 Gothic OTF normal";
+}
+
 #subBox {
   width: 100%;
   height: 100%;
-  background-color: #70853C;
+  background-color: #333;
 }
 
 .sub_container {
@@ -205,20 +205,11 @@ p {
   box-sizing: border-box;
   background-color: transparent;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1023px) {
   .sub_cont {
     float: none;
     width: 100%;
-    height: auto;
-    min-height: 600px;
-    border-right: 0;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1023px) {
-  .sub_cont {
-    float: none;
-    width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 600px;
     border-right: 0;
   }
@@ -232,14 +223,10 @@ p {
   font-size: 2rem;
   background-color: #70853C;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1023px) {
   .text_area {
     padding-top: 8rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1023px) {
-  .text_area {
-    padding-top: 8rem;
+    max-height: 600px;
   }
 }
 .text_area p {
@@ -248,13 +235,7 @@ p {
   bottom: 8rem;
   text-align: left;
 }
-@media screen and (max-width: 639px) {
-  .text_area p {
-    right: 0;
-    bottom: 0;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .text_area p {
     right: 0;
     bottom: 0;
@@ -277,13 +258,7 @@ p {
 .text_area a:focus, .text_area a:hover {
   background-color: transparent;
 }
-@media screen and (max-width: 639px) {
-  .text_area a {
-    right: 5rem;
-    bottom: 15rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .text_area a {
     right: 5rem;
     bottom: 15rem;
@@ -294,6 +269,11 @@ p {
   position: relative;
   background-color: #333;
   border: 0;
+}
+@media screen and (max-width: 1023px) {
+  .img_area .btn_area {
+    display: none;
+  }
 }
 .img_area .btn_area {
   position: absolute;
@@ -313,12 +293,17 @@ p {
   height: 100%;
 }
 .img_area .img_part ul li {
-  display: none;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 80%;
+}
+@media screen and (max-width: 1023px) {
+  .img_area .img_part ul li {
+    display: block;
+    height: 50%;
+  }
 }
 .img_area .img_part ul li a {
   display: block;
@@ -374,12 +359,7 @@ p {
   height: 100%;
   background-color: #333;
 }
-@media screen and (max-width: 639px) {
-  .img_big {
-    display: none;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .img_big {
     display: none;
   }

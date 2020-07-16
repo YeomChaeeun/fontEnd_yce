@@ -159,7 +159,7 @@
 #subBox {
   width: 100%;
   height: 100%;
-  background-color: #70853C;
+  background-color: #333;
 }
 
 .sub_container {
@@ -169,6 +169,11 @@
   height: 100%;
   padding-left: 3.875rem;
   box-sizing: border-box;
+}
+@media screen and (max-width: 1024px) {
+  .sub_container {
+    overflow: auto;
+  }
 }
 @media screen and (max-width: 639px) {
   .sub_container {
@@ -200,6 +205,15 @@ p {
   box-sizing: border-box;
   background-color: transparent;
 }
+@media screen and (max-width: 1023px) {
+  .sub_cont {
+    float: none;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    border-right: 0;
+  }
+}
 
 .text_area {
   position: relative;
@@ -209,11 +223,23 @@ p {
   font-size: 2rem;
   background-color: #70853C;
 }
+@media screen and (max-width: 1023px) {
+  .text_area {
+    padding-top: 8rem;
+    max-height: 600px;
+  }
+}
 .text_area p {
   position: absolute;
   left: 2rem;
   bottom: 8rem;
   text-align: left;
+}
+@media screen and (max-width: 1023px) {
+  .text_area p {
+    right: 0;
+    bottom: 0;
+  }
 }
 .text_area a {
   position: absolute;
@@ -232,11 +258,22 @@ p {
 .text_area a:focus, .text_area a:hover {
   background-color: transparent;
 }
+@media screen and (max-width: 1023px) {
+  .text_area a {
+    right: 5rem;
+    bottom: 15rem;
+  }
+}
 
 .img_area {
   position: relative;
   background-color: #333;
   border: 0;
+}
+@media screen and (max-width: 1023px) {
+  .img_area .btn_area {
+    display: none;
+  }
 }
 .img_area .btn_area {
   position: absolute;
@@ -256,12 +293,17 @@ p {
   height: 100%;
 }
 .img_area .img_part ul li {
-  display: none;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 80%;
+}
+@media screen and (max-width: 1023px) {
+  .img_area .img_part ul li {
+    display: block;
+    height: 50%;
+  }
 }
 .img_area .img_part ul li a {
   display: block;
@@ -321,6 +363,11 @@ p {
   width: 100%;
   height: 100%;
   background-color: #333;
+}
+@media screen and (max-width: 1023px) {
+  .img_big {
+    display: none;
+  }
 }
 .img_big .btn_area {
   position: absolute;

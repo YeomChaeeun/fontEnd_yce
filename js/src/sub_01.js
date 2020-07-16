@@ -19,6 +19,11 @@
   var timed = 600;
   
 
+
+  var Mob = function(){
+    // ImgUl.css({height:ImgLen*100+'%'});
+  }
+
   // 1024px 이상에서만 작동하게함
   var pcFull = function(){
     // subBox 자동슬라이드 fadeIn, fadeOut
@@ -112,6 +117,8 @@
 
   if(winW>=1024){
     pcFull();
+  }else if(winW<1024){
+    Mob();
   }
   
 })(jQuery);

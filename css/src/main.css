@@ -162,6 +162,13 @@
   min-height: 800px;
   background-color: #70853C;
 }
+#viewBox .text-container h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+#viewBox .text-container h2 span {
+  font-weight: bold;
+}
 
 .view_content {
   width: 100%;
@@ -176,7 +183,7 @@
     padding-top: 30%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1023px) {
   .view_content {
     padding-left: 0;
   }
