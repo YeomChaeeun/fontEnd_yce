@@ -543,6 +543,25 @@
 #contactBox .text-container p {
   text-align: left;
   margin: 0;
+  margin-bottom: 1rem;
+}
+#contactBox .text-container p a {
+  display: block;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+}
+#contactBox .text-container p.p_num {
+  font-size: 2rem;
+}
+#contactBox .text-container p.p_num:hover {
+  color: #C9971F;
+}
+#contactBox .text-container p.e_mail {
+  font-size: 2rem;
+}
+#contactBox .text-container p.e_mail:hover {
+  color: #C9971F;
 }
 
 #footBox {
